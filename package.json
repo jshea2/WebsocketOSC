@@ -119,7 +119,7 @@
   ],
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/electron-react-boilerplate/electron-react-boilerplate/issues"
+    
   },
   "keywords": [
     "electron",
@@ -132,7 +132,7 @@
     "hot",
     "reload"
   ],
-  "homepage": "https://github.com/electron-react-boilerplate/electron-react-boilerplate#readme",
+  "homepage": "https://github.com/jshea/websocketosc",
   "jest": {
     "testURL": "http://localhost/",
     "testEnvironment": "jsdom",
