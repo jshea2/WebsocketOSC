@@ -33,8 +33,15 @@ Websocket Message:
 }
 ```
 
+## Limits
+
+- Only one OSC message at a time. 
+    - Bundle OSC isn't supported yet.
+- Takes only one argument
+
+
 
 
 
 # Credits:
-Inspired by [osc2ws](https://github.com/pandrr/osc2ws). This does the same just as a standalone app.
+Inspired by [osc2ws](https://github.com/pandrr/osc2ws). This does the same thing just as a standalone app.
