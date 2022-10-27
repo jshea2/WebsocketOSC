@@ -7,7 +7,7 @@ Control Actions in WATCHOUT via OSC
 
 # Setup
 
-### Eosssssss
+### derp
 
 - System > Show Control > OSC
     - Enable **OSC TX**
