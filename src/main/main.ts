@@ -215,7 +215,7 @@ const createWindow = async () => {
 
     // WEBSOCKET and EXPRESS
     const wss = new WebSocket.Server({server:server})
-    const ws = new WebSocket(`ws://localhost:${watchoutPortOut}`, {
+    const ws = new WebSocket(`ws://${watchoutIpOut}:${watchoutPortOut}`, {
       perMessageDeflate: false
     });
 

@@ -6,5 +6,5 @@
   "ipwatchout": "127.0.0.1",
   "portwatchout": "8001",
   "oscinenabled": true,
-  "oscoutenabled": true
+  "oscoutenabled": false
 }
