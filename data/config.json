@@ -3,8 +3,8 @@
   "portosc": "3333",
   "iposcout": "127.0.0.1",
   "portoscout": "4444",
-  "ipwatchout": "127.0.0.1",
+  "ipwatchout": "localhost",
   "portwatchout": "8001",
   "oscinenabled": true,
-  "oscoutenabled": true
+  "oscoutenabled": false
 }

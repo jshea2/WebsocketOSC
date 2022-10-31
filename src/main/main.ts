@@ -215,12 +215,13 @@ const createWindow = async () => {
 
     // WEBSOCKET and EXPRESS
     const wss = new WebSocket.Server({server:server})
-    const ws = new WebSocket(`ws://localhost:${watchoutPortOut}`, {
+    const ws = new WebSocket(`ws://${watchoutIpOut}:${watchoutPortOut}`, {
       perMessageDeflate: false
     });
 
 
     wss.on('connection', function connection(ws) {
+      logEverywhere(`New Connection`)
       console.log("connected to server")
       mainWindow.webContents.send("woconnected", true)
 
@@ -234,8 +235,17 @@ const createWindow = async () => {
             a: msg[0]
           }
           ws.send(JSON.stringify(obj));
-
         })
+
+        oscServer.on('bundle', function (bundle) {
+          console.log(bundle)
+          ws.send(JSON.stringify(bundle));
+          bundle.elements.forEach((element, i) => {
+            // console.log(`Timestamp: ${bundle.timetag[i]}`);
+            logEverywhere(`Bundle OSC Message: ${element}`);
+          });
+          //oscServer.close();
+        });
       }
 
       if (oscOutEnabled){
@@ -247,6 +257,14 @@ const createWindow = async () => {
         });
       }
 
+
+      ws.on('message', function message(data) {
+        wss.clients.forEach(client => {
+          client.send(data.toString())
+        })
+        logEverywhere(`Websocket Data: `)
+        logEverywhere(data.toString())
+      })
 
       //ws.close()
 
@@ -271,16 +289,8 @@ const createWindow = async () => {
       console.log('OSC Server is listening');
       console.log(`OSC IP: ${oscIpIn}\n OSC Port: ${oscPortIn}`)
 
-
     });
 
-    oscServer.on('bundle', function (bundle) {
-      bundle.elements.forEach((element, i) => {
-        console.log(`Timestamp: ${bundle.timetag[i]}`);
-        console.log(`Message: ${element}`);
-      });
-      //oscServer.close();
-    });
     }
 
     if (oscOutEnabled){
