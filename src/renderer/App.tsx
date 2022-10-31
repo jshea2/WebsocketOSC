@@ -249,7 +249,7 @@ const handleSubmit = async (e) => {
       </div>
 
       <br></br>
-      <h2 className='App-header'>Websocket (Out)</h2>
+      <h2 className='App-header'>Websocket</h2>
       <TextField
       sx={{
         input: { color: 'white'},
