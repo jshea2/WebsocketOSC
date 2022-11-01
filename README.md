@@ -54,4 +54,4 @@ Use operators `ReceiveOSC_WebsocketOSC`, `SendOSC_WebsocketOSC`, or `ReceiveOSCB
 
 
 # Credits:
-Inspired by [osc2ws](https://github.com/pandrr/osc2ws). This does the same thing just as a standalone app.
+Inspired by [osc2ws](https://github.com/pandrr/osc2ws).
