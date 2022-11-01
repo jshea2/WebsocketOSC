@@ -33,7 +33,7 @@ Websocket Message:
 ]}
 ```
 
-## Getting OSC in cables.gl
+## Getting data in cables.gl
 
 Use operators `ReceiveOSC_WebsocketOSC`, `SendOSC_WebsocketOSC`, or `ReceiveOSCBundle_WebsocketOSC` to parse data from the `Websocket` operator.
 
