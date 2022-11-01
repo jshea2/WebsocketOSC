@@ -230,11 +230,11 @@ const createWindow = async () => {
 
           console.log(`OSC Message: ${msg}`)
           logEverywhere(`OSC Message: ${msg}`)
-          let obj = {
-            v:[msg[1]],
-            a: msg[0]
-          }
-          ws.send(JSON.stringify(obj));
+          // let obj = {
+          //   v:[msg[1]],
+          //   a: msg[0]
+          // }
+          ws.send(JSON.stringify(msg));
         })
 
         oscServer.on('bundle', function (bundle) {
@@ -253,7 +253,9 @@ const createWindow = async () => {
           console.log("This is the Websocket Data:")
           console.log(data.toString());
           let wsoscmessage = JSON.parse(data.toString())
-          oscClient.send(wsoscmessage.a, wsoscmessage.v)
+          //oscClient.send(wsoscmessage.a, wsoscmessage.v)
+          console.log(wsoscmessage)
+          oscClient.send(wsoscmessage)
         });
       }
 
