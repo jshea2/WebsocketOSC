@@ -8,8 +8,17 @@ Send and Recieve OSC via Websockets
 <img width="421" alt="Screen Shot 2022-10-26 at 8 46 42 PM" src="https://user-images.githubusercontent.com/70780576/198193033-a9c5f42b-6dba-4a1d-b6f7-7d033230121e.png">
 
 
-## [cables.gl](https://cables.gl/p/2iVGMg) example project
+## cables.gl example projects:
+
+### [Sending and Receiving OSC Messages (Single and Bundled)](https://cables.gl/p/2iVGMg)
+
 <img width="516" alt="Screen Shot 2022-10-31 at 8 13 24 PM" src="https://user-images.githubusercontent.com/70780576/199154079-7d9894cc-c070-41e9-88c0-f03442c4f23e.png">
+
+### [Mobile Sensors (Zig Sim Pro -> WebsocketOSC -> Cables.gl)](https://cables.gl/p/4ajLcg)
+
+
+https://user-images.githubusercontent.com/70780576/199161233-e78b905d-c163-4b7c-b4d4-84cb4734647a.mov
+
 
 ## Features:
 - Single OSC message supports muliple arguments `(v1.3.0)`
@@ -37,7 +46,7 @@ Websocket Message:
 
 Use operators `ReceiveOSC_WebsocketOSC`, `SendOSC_WebsocketOSC`, or `ReceiveOSCBundle_WebsocketOSC` to parse data from and/or to the `Websocket` operator.
 
-[Example cables.gl project](https://cables.gl/p/2iVGMg)
+[Simple example cables.gl project](https://cables.gl/p/2iVGMg)
 
 
 # Credits:
