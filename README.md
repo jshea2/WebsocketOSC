@@ -55,3 +55,10 @@ Use operators `ReceiveOSC_WebsocketOSC`, `SendOSC_WebsocketOSC`, or `ReceiveOSCB
 
 # Credits:
 Inspired by [osc2ws](https://github.com/pandrr/osc2ws).
+
+#
+## Join the Discord Community
+
+<a href="https://discord.gg/FJ79AKPgSk">
+        <img src="https://img.shields.io/discord/308323056592486420?logo=discord"
+            alt="chat on Discord"></a>
